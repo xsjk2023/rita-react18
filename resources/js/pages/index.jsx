@@ -5,10 +5,10 @@ import { Admin, Authenticated, Guest } from '../lib/authorization'
 import { IPageProps } from '../lib/types'
 import useTitle from '../lib/use-title'
 
-const Index: React.FC = () => {
+const Index = () => {
   const {
     props: { user, authenticated },
-  } = usePage<IPageProps>()
+  } = usePage()
   authenticated ? useTitle(user.name) : useTitle('Home')
   return (
     <Layout links={[]}>

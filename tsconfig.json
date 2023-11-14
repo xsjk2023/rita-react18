@@ -8,6 +8,9 @@
     "build"
   ],
   "compilerOptions": {
+    "noEmit": true,
+    "noEmitOnError": true,
+    "jsx": "react",
     "outDir": "build",
     "rootDir": "./",
     "sourceMap": true,

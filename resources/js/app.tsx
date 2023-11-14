@@ -6,13 +6,27 @@ import { socket, SocketContext } from './context/socket'
 
 const el = document.getElementById('app')
 
-ReactDOM.render(
+// ReactDOM.render(
+//   <SocketContext.Provider value={socket}>
+//     <InertiaApp
+//       initialPage={JSON.parse(el.dataset.page)}
+//       initialComponent={null}
+//       resolveComponent={(name) => import(`./pages/${name}`).then((module) => module.default)}
+//     />
+//   </SocketContext.Provider>,
+//   el
+// )
+
+import { createRoot } from 'react-dom/client'
+const container = document.getElementById('app')
+
+const root = createRoot(container) // createRoot(container!) if you use TypeScript
+root.render(
   <SocketContext.Provider value={socket}>
     <InertiaApp
       initialPage={JSON.parse(el.dataset.page)}
       initialComponent={null}
       resolveComponent={(name) => import(`./pages/${name}`).then((module) => module.default)}
     />
-  </SocketContext.Provider>,
-  el
+  </SocketContext.Provider>
 )
