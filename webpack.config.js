@@ -147,6 +147,10 @@ Encore.configureDevServerOptions((options) => {
     directory: join(__dirname, './resources/views'),
     watch: true,
   })
+
+  options.client = {
+    overlay: false,
+  }
 })
 
 /*

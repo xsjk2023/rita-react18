@@ -8,6 +8,7 @@
     "build"
   ],
   "compilerOptions": {
+    "skipLibCheck": true,
     "noEmit": true,
     "noEmitOnError": true,
     "jsx": "react",
