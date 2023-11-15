@@ -5,11 +5,11 @@ import { SignInWithGithub, SignInWithGoogle } from '../../components/SocialButto
 import TextInput from '../../components/TextInput'
 import useTitle from '../../lib/use-title'
 
-interface iLoginProps {
+interface ILoginProps {
   error?: string
 }
 
-const Login: React.FC<iLoginProps> = ({ error }: iLoginProps) => {
+const Login: React.FC<ILoginProps> = ({ error }: ILoginProps) => {
   const { setData, post, processing, errors } = useForm({
     email: '',
     password: '',
